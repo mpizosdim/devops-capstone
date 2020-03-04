@@ -28,7 +28,7 @@ jenkinsupdate:
 	bash ./scripts/cloud_scripts.sh update capstonejenkins infastructure/jenkins.yaml infastructure/parameters.json
 
 builddocker:
-	docker build --tag=mpizos/devopscapstone .
+	docker build --tag=devopscapstone .
 
 all: install lint
 
