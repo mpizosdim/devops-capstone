@@ -40,6 +40,8 @@ Resources:
           sudo apt-get install jenkins tidy -y
           sudo apt-get install build-essential -y
           sudo apt-get install pylint -y
+          sudo apt install docker.io -y
+          sudo chmod 777 /var/run/docker.sock
           sudo systemctl status jenkins
       SecurityGroupIds:
         - Ref: JenkinsSG
