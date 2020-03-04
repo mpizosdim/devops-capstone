@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Lint app') {
       steps {
-        sh 'echo "running"'
+        sh 'make lint'
       }
     }
   }
