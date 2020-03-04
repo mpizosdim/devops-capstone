@@ -14,7 +14,7 @@ pipeline {
     stage('Push') {
       steps {
         withAWS(region:'eu-north-1',credentials:'awscredentials') {
-           docker.withRegistry('401758331800.dkr.ecr.eu-north-1.amazonaws.com/capstone-repository') {
+           withDockerRegistry('401758331800.dkr.ecr.eu-north-1.amazonaws.com/capstone-repository') {
             docker.image('mpizos/devopscapstone').push('latest')
            }
         }
