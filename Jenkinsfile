@@ -6,5 +6,10 @@ pipeline {
         sh 'make lint'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'make builddocker'
+      }
+    }
   }
 }
