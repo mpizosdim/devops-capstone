@@ -6,8 +6,7 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
 lint:
-	hadolint Dockerfile
-		pylint --disable=R,C,W1203,W1202 app/app.py
+	pylint --disable=R,C,W1203,W1202 app/app.py
 
 cloudcreate:
 	bash ./scripts/cloud_scripts.sh create capstoneproject infastructure/network.yaml infastructure/parameters.json
@@ -21,6 +20,9 @@ clouddelete:
 
 jenkinscreate:
 	bash ./scripts/cloud_scripts.sh create capstonejenkins infastructure/jenkins.yaml infastructure/parameters.json
+
+jenkinsupdate:
+	bash ./scripts/cloud_scripts.sh update capstonejenkins infastructure/jenkins.yaml infastructure/parameters.json
 
 
 all: install lint

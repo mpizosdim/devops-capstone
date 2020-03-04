@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Lint HTML') {
+    stage('Lint app') {
       steps {
-        sh 'echo "running"'
+        make lint
       }
     }
   }
