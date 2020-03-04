@@ -14,7 +14,7 @@ Order to initialize the project
  * find ip from create ec2 instance for jenkins and enter on port 8080. Actions:  
      * Create profile
      * install blue ocean and assign repository.
-     * install CloudBees for aws credentials. assign aws credentials
+     * install CloudBees for aws credentials and Pipeline: AWS Steps. assign aws credentials in global and name them `awscredentials`
      * for updating run `sudo service jenkins restart` 
  
 

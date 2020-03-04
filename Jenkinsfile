@@ -14,7 +14,9 @@ pipeline {
     stage('Push') {
       steps {
         withAWS(region:'eu-north-1',credentials:'awscredentials') {
-           sh 'make lint'
+           docker.withRegistry('401758331800.dkr.ecr.eu-north-1.amazonaws.com/capstone-repository') {
+            docker.image('mpizos/devopscapstone').push('latest')
+           }
         }
       }
     }
