@@ -17,6 +17,9 @@ cloudupdate:
 clouddelete:
 	bash ./scripts/cloud_scripts.sh delete capstoneproject
 
+dockercreate:
+	bash ./scripts/cloud_scripts.sh create capstonedocker infastructure/docker.yaml infastructure/parameters.json
+
 
 jenkinscreate:
 	bash ./scripts/cloud_scripts.sh create capstonejenkins infastructure/jenkins.yaml infastructure/parameters.json

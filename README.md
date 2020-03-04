@@ -11,8 +11,11 @@ make install
 Order to initialize the project
  * To create the network infastructure: ```make cloudcreate```  
  * to create jenkins ec2: ```make jenkinscreate```  
- * find ip from create ec2 instance for jenkins and enter on port 8080. Create profile, install blue ocean and assing repository. for updating
- run `service jenkins restart` 
+ * find ip from create ec2 instance for jenkins and enter on port 8080. Actions:  
+     * Create profile
+     * install blue ocean and assign repository.
+     * install CloudBees for aws credentials. assign aws credentials
+     * for updating run `sudo service jenkins restart` 
  
 
 ## Tasks

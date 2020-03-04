@@ -1,0 +1,10 @@
+Parameters:
+  EnvName:
+    Description: An environment name that will be prefixed to all resources
+    Type: String
+
+Resources:
+  ECRR3CY19:
+    Type: 'AWS::ECR::Repository'
+    Properties:
+       RepositoryName: "capstone-repository"
