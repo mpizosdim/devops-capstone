@@ -20,13 +20,9 @@ dockercreate:
 applicationcreate:
 	bash ./scriptssh/cloud_scripts.sh create capstoneapplication infastructure/application.yaml infastructure/parameters.json
 
-applicationupdate:
-	bash ./scriptssh/cloud_scripts.sh update capstoneapplication infastructure/application.yaml infastructure/parameters.json
-
 jenkinscreate:
 	bash ./scriptssh/cloud_scripts.sh create capstonejenkins infastructure/jenkins.yaml infastructure/parameters.json
 
 builddocker:
 	docker build --tag=devopscapstone .
-
 
