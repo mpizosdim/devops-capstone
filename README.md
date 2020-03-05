@@ -6,6 +6,7 @@ a simple flask app where when push a change on github repository it:
  * builds the containerized app
  * push the containirzed app on amazon ecr
  * publish the app in ecs
+ * every time there is a push in master it updates the ecs service
   
 technology used for this application: 
 

@@ -25,8 +25,7 @@ pipeline {
   stage('Update') {
     steps {
         withAWS(region:'eu-north-1',credentials:'awscredentials') {
-           sh "aws ecs update-service --cluster ECSclusterUpdate --service capstoneapplication-ECS-SERVICE --force-new-deployment
-"
+           sh "aws ecs update-service --cluster ECSclusterUpdate --service capstoneapplication-ECS-SERVICE --force-new-deployment"
         }
     }
   }
