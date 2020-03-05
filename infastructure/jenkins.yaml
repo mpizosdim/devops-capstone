@@ -41,13 +41,13 @@ Resources:
           sudo apt-get install build-essential -y
           sudo apt-get install pylint -y
           sudo apt install docker.io -y
-          sudo apt install awscli
+          sudo apt install awscli -y
           sudo chmod 777 /var/run/docker.sock
           sudo systemctl status jenkins
       SecurityGroupIds:
         - Ref: JenkinsSG
       SubnetId:
-        Fn::ImportValue: !Sub "${EnvName}-PUBLIC-SUBNET"
+        Fn::ImportValue: !Sub "${EnvName}-PUBLIC-SUBNET-1"
       BlockDeviceMappings:
         - DeviceName: "/dev/sdk"
           Ebs:
