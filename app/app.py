@@ -6,7 +6,7 @@ dymmydata = f.read()
 
 @app.route('/')
 def hello():
-    return "Hello World!"
+    return "Hello World changed!"
 
 
 @app.route('/getdummydata')
