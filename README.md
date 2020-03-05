@@ -1,4 +1,22 @@
 # Sample App
+# Information
+
+a simple flask app where when push a change on github repository it:
+ * checks for errors on the code  
+ * builds the containerized app
+ * push the containirzed app on amazon ecr
+ * publish the app in ecs
+  
+technology used for this application: 
+
+ * simple flask app
+ * jenkins
+ * ec2 instance for jenkins
+ * docker container to dockerize the flask app
+ * amazon ecr to publish the container
+ * amazon ecs to run the containirized application in production
+ * cloudwatch for logs of the app
+ 
 ## local initialization
 
 ```
@@ -16,23 +34,7 @@ Order to initialize the project
      * Create profile
      * install blue ocean and assign repository.
      * install CloudBees for aws credentials and Pipeline: AWS Steps. assign aws credentials in global and name them `awscredentials`
-     * fo   r updating run `sudo service jenkins restart`
- * to create application ```make application```  
+     * change triggering to configure to 1 minute
+     * for updating run `sudo service jenkins restart`
+ * to create application ```make applicationcreate```  
  
-  
- 
- 
-
-## Tasks
-
- - [x] flask app with login
- - [x] flask app comunicate with database
- - [x] post and get 
- - [x] initialize database
- - [x] initialize git
- - [x] create jenkins
- - [x] network template
- - [x] jenkins
- - [x] docker
- - [x] eks
- - [x] create initial files
